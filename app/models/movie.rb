@@ -23,6 +23,9 @@ class Movie < ApplicationRecord
   #   return the_director
   # end
 
-  
+  belongs_to(:director, {
+    :class_name => "Director",
+    :foreign_key => "director_id"
+  })
 
 end
